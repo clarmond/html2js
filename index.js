@@ -31,7 +31,7 @@ function updateCode() {
 		text = text.replace(/\n\s+/g, '');
 		text = text.replace(/[\n\r]/g, '');
 		let pattern = new RegExp('(.{' + maxColumns.toString() + '})', 'g');
-		text = text.replace(pattern, "$1" + quoteType + '\n+ ' + quoteType);
+		text = text.replace(pattern, "$1" + quoteType + '\n+' + quoteType);
 		text = '+ ' + quoteType + text;
 	}
 	code += text + quoteType + ';';
